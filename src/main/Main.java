@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package main;
 import models.ModelMain;
 import views.ViewMain;
@@ -15,10 +11,8 @@ import controllers.ControllerAgenda;
 import models.ModelDetalleContacto;
 import views.ViewDetalleContacto;
 import controllers.ControllerDetalleContacto;
-/**
- *
- * @author Zeo
- */
+
+
 public class Main {
 
     /**

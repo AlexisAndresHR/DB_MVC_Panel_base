@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controllers;
 
 import java.awt.event.ActionEvent;
@@ -10,10 +6,7 @@ import java.awt.event.ActionListener;
 import models.ModelAgenda;
 import views.ViewAgenda;
 
-/**
- *
- * @author Salvador Hernandez Mendoza
- */
+
 public class ControllerAgenda {
 
     public ModelAgenda modelAgenda;
@@ -35,9 +28,7 @@ public class ControllerAgenda {
             } else if (e.getSource() == viewAgenda.jbtn_ultimo) {
                 jbtn_ultimo_actionPerformed();
             }
-
         }
-
     };
 
     /**
@@ -61,8 +52,10 @@ public class ControllerAgenda {
         modelAgenda.conectarDB();
         viewAgenda.jtf_nombre.setText(modelAgenda.getNombre());
         viewAgenda.jtf_email.setText(modelAgenda.getEmail());
+        viewAgenda.jtf_telefono.setText(modelAgenda.getTelefono());
     }
 
+    
 //    /**
 //     * Metodo para inicializar la ViewAgenda
 //     */
@@ -72,6 +65,7 @@ public class ControllerAgenda {
 //        viewAgenda.setVisible(true);
 //    }
 
+    
     /**
      * Método para agregar el actionListener a cada boton de la vista
      */
@@ -86,7 +80,6 @@ public class ControllerAgenda {
      * Método para ver el primer registro de la tabla contactos
      */
     private void jbtn_primero_actionPerformed() {
-        System.out.println("Action del boton jbtn_primero");
          modelAgenda.moverPrimerRegistro();
         setValues();
     }
@@ -95,7 +88,6 @@ public class ControllerAgenda {
      * Método para ver el registro anterior de la tabla contactos.
      */
     private void jbtn_anterior_actionPerformed() {
-        System.out.println("Action del boton jbtn_anterior");
         modelAgenda.moverAnteriorRegistro();
         setValues();
     }
@@ -104,7 +96,6 @@ public class ControllerAgenda {
      * Método para ver el último registro de la tabla contactos.
      */
     private void jbtn_ultimo_actionPerformed() {
-        System.out.println("Action del boton jbtn_ultimo");
         modelAgenda.moverUltimoRegistro();
         setValues();
     }
@@ -113,7 +104,6 @@ public class ControllerAgenda {
      * Método para ver el siguiente registro de la tabla contactos.
      */
     private void jbtn_siguiente_actionPerformed() {
-        System.out.println("Action del boton jbtn_siguiente");
         modelAgenda.moverSiguienteRegistro();
         setValues();
     }
@@ -124,5 +114,6 @@ public class ControllerAgenda {
     private void setValues() {
         viewAgenda.jtf_nombre.setText(modelAgenda.getNombre());
         viewAgenda.jtf_email.setText(modelAgenda.getEmail());
+        viewAgenda.jtf_telefono.setText(modelAgenda.getTelefono());
     }
 }

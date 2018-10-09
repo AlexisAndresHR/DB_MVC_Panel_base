@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controllers;
 
 import java.awt.event.ActionEvent;
@@ -10,10 +6,7 @@ import java.awt.event.ActionListener;
 import models.ModelMain;
 import views.ViewMain;
 
-/**
- *
- * @author Zeo
- */
+
 public class ControllerMain {
 
     private final ModelMain modelMain;
@@ -106,6 +99,7 @@ public class ControllerMain {
         // 
         controllerDetalleContacto.modelDetalleContacto.setNombre(controllerAgenda.modelAgenda.getNombre());
         controllerDetalleContacto.modelDetalleContacto.setEmail(controllerAgenda.modelAgenda.getEmail());
+        controllerDetalleContacto.modelDetalleContacto.setTelefono(controllerAgenda.modelAgenda.getTelefono());
         controllerDetalleContacto.initView();
         
         viewMain.setContentPane(controllerDetalleContacto.viewDetalleContacto);

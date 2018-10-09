@@ -35,7 +35,9 @@ public class ViewMain extends javax.swing.JFrame {
         jmi_salir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 204, 255));
 
+        jMenu1.setBackground(new java.awt.Color(153, 204, 255));
         jMenu1.setText("Archivo");
 
         jmi_agenda.setText("Agenda");
